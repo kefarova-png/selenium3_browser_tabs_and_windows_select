@@ -2,13 +2,14 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 #  Chrome. Создаём переменную для опций браузера
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
+
+#  Создаём вебдрайвер Chrome, с автоматической проверкой/установкой драйвера и c настройками, которые в options
 driver = webdriver. Chrome (
     options=options,
     service=ChromeService(ChromeDriverManager().install())
